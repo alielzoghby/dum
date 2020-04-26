@@ -61,3 +61,13 @@ for (i = 0; i < button.length; i += 1) {
 addEventListener("keydown", function (event) {
   switchSounds(event.key);
 });
+
+// *************** key animation *************
+
+function keyAnimation(keyName) {
+  var button = document.querySelector("." + keyName);
+  button.classList.add("pressed");
+  setTimeout(function () {
+    button.classList.remove("pressed");
+  }, 200);
+}
