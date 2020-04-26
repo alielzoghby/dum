@@ -53,6 +53,7 @@ for (i = 0; i < button.length; i += 1) {
   button[i].addEventListener("click", function () {
     var buttontext = this.textContent;
     switchSounds(buttontext);
+    keyAnimation(buttontext);
   });
 }
 
@@ -60,6 +61,7 @@ for (i = 0; i < button.length; i += 1) {
 
 addEventListener("keydown", function (event) {
   switchSounds(event.key);
+  keyAnimation(event.key);
 });
 
 // *************** key animation *************
